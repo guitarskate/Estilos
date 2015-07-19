@@ -8,6 +8,7 @@ import android.os.AsyncTask;
 import android.os.Handler;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.internal.widget.AdapterViewCompat;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
@@ -84,9 +85,9 @@ public class MainActivity extends ActionBarActivity {
 
         draggableView = (DraggableView) findViewById(R.id.draggable_view_resut);
 
-        //nombre = (TextView) findViewById(R.id.txt_nombre_resultado);
-       // ubicacion = (TextView) findViewById(R.id.txt_ubicacion_resultado);
-       // horario = (TextView) findViewById(R.id.txt_horario_resultado);
+        nombre = (TextView) findViewById(R.id.txt_nombre_resultado);
+        ubicacion = (TextView) findViewById(R.id.txt_ubicacion_resultado);
+        horario = (TextView) findViewById(R.id.txt_horario_resultado);
         imagen = (ImageView) findViewById(R.id.img_resultado);
 
         // Hashmap para el ListView
@@ -103,6 +104,7 @@ public class MainActivity extends ActionBarActivity {
                 //Toast.makeText(MainActivity.this, "Hola has presionado este boton", Toast.LENGTH_LONG).show();
                 //Intent intent = new Intent(MainActivity.this, Registrar.class);
                 //startActivity(intent);
+                openDraggableView();
             }
         });
 
@@ -173,8 +175,15 @@ public class MainActivity extends ActionBarActivity {
         lista.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-/*
-                openDraggableView(view);
+
+                Handler handler = new Handler();
+                handler.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        draggableView.setVisibility(View.VISIBLE);
+                        draggableView.maximize();
+                    }
+                }, DELAY_MILLIS);
 
                 System.out.println(empresaList.get(position));
 
@@ -194,16 +203,16 @@ public class MainActivity extends ActionBarActivity {
 
                     bitmap = BitmapFactory.decodeFile(ruta_imgS);
 
-                    //nombre.setText(nombreS);
-                    //ubicacion.setText(ubicacionS);
-                    //horario.setText(horarioS);
-                    //imagen.setImageBitmap(bitmap);
+                    nombre.setText(nombreS);
+                    ubicacion.setText(ubicacionS);
+                    horario.setText(horarioS);
+                    imagen.setImageBitmap(bitmap);
 
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
 
-                System.out.println("JSON LIST ------------ " + aux);*/
+                System.out.println("JSON LIST ------------ " + aux);
 
                 //openDraggableView(view);
             }
@@ -222,7 +231,7 @@ public class MainActivity extends ActionBarActivity {
         }, DELAY_MILLIS);
     }
 
-    public void openDraggableView(View v) {
+    private void openDraggableView() {
         Handler handler = new Handler();
         handler.postDelayed(new Runnable() {
             @Override
