@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Estilos</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_splash_screen">Estilos</string>
+    <string name="wellcome">BIENVENIDOS A ESTILOS</string>
+    <string name="wellcome_description">Donde encontra todo acerda de estilos</string>
+    <string name="title_activity_search">Search</string>
+    <string name="title_activity_registrar">Registrar</string>
+</resources>

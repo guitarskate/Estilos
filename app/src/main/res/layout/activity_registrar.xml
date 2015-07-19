@@ -1,0 +1,139 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context="com.co.estilos.Registrar"
+    android:gravity="center_horizontal">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar"
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent" />
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/img"
+        android:layout_marginTop="16sp"
+        android:layout_marginBottom="16sp"
+        android:layout_marginLeft="16dp"
+        android:layout_below="@+id/toolbar"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:src="@drawable/ic_nombre" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20dp"
+        android:hint="Nombre"
+        android:id="@+id/editText"
+        android:textColor="@color/primary_text"
+        android:textColorHint="@color/secondary_text"
+        android:layout_alignTop="@+id/img"
+        android:layout_toRightOf="@+id/img"
+        android:background="@drawable/line_search"
+        android:layout_marginLeft="17dp"
+        android:layout_marginStart="17dp"
+        android:layout_alignBottom="@+id/img"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:gravity="bottom" />
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/imageView"
+        android:src="@drawable/ic_ubicacion"
+        android:layout_below="@+id/img"
+        android:layout_alignLeft="@+id/img"
+        android:layout_alignStart="@+id/img" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Ubicacion"
+        android:id="@+id/editText2"
+        android:background="@drawable/line_search"
+        android:textColor="@color/primary_text"
+        android:textColorHint="@color/secondary_text"
+        android:gravity="bottom"
+        android:layout_alignBottom="@+id/imageView"
+        android:layout_alignLeft="@+id/editText"
+        android:layout_alignStart="@+id/editText"
+        android:layout_alignRight="@+id/editText"
+        android:layout_alignEnd="@+id/editText"
+        android:layout_alignTop="@+id/imageView" />
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/imageView2"
+        android:layout_marginTop="16sp"
+        android:layout_marginBottom="16sp"
+        android:layout_marginLeft="16dp"
+        android:src="@drawable/ic_horario"
+        android:layout_below="@+id/imageView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Horario"
+        android:id="@+id/editText3"
+        android:background="@drawable/line_search"
+        android:textColor="@color/primary_text"
+        android:textColorHint="@color/secondary_text"
+        android:gravity="bottom"
+        android:layout_alignBottom="@+id/imageView2"
+        android:layout_alignTop="@+id/imageView2"
+        android:layout_alignRight="@+id/editText2"
+        android:layout_alignEnd="@+id/editText2"
+        android:layout_alignLeft="@+id/editText2"
+        android:layout_alignStart="@+id/editText2" />
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/imageView3"
+        android:layout_marginTop="16sp"
+        android:layout_marginBottom="16sp"
+        android:layout_marginLeft="16dp"
+        android:src="@drawable/ic_ruta"
+        android:layout_below="@+id/editText3"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Ruta imagen"
+        android:id="@+id/editText4"
+        android:background="@drawable/line_search"
+        android:textColor="@color/primary_text"
+        android:textColorHint="@color/secondary_text"
+        android:gravity="bottom"
+        android:layout_alignBottom="@+id/imageView3"
+        android:layout_alignLeft="@+id/editText3"
+        android:layout_alignStart="@+id/editText3"
+        android:layout_alignTop="@+id/imageView3"
+        android:layout_alignRight="@+id/editText3"
+        android:layout_alignEnd="@+id/editText3" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Registrar"
+        android:id="@+id/btn_registrar"
+        android:background="@color/primary"
+        android:textColor="@color/icons"
+        android:layout_marginTop="16dp"
+        android:layout_below="@+id/editText4"
+        android:layout_alignLeft="@+id/imageView3"
+        android:layout_alignStart="@+id/imageView3"
+        android:layout_alignRight="@+id/editText4"
+        android:layout_alignEnd="@+id/editText4" />
+
+</RelativeLayout>
